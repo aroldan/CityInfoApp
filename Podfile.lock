@@ -1,0 +1,20 @@
+PODS:
+  - HSCityFacts (0.0.1):
+    - HSCore
+  - HSCore (0.0.1):
+    - JLRoutes (~> 1.5)
+  - HSSimpleWeather (0.0.1):
+    - HSCore
+  - JLRoutes (1.5.1)
+
+DEPENDENCIES:
+  - HSCityFacts
+  - HSSimpleWeather
+
+SPEC CHECKSUMS:
+  HSCityFacts: d1e5b5a4d758d8865deb8b300942ae8c211f4bfc
+  HSCore: 562a50eea482094e98cf435dd45505c093fe6b70
+  HSSimpleWeather: 1d696abc259d5c92c40c7143d9e009b6e252def3
+  JLRoutes: 3400fe314fc01c861a14ff7e183d209b0cd302ae
+
+COCOAPODS: 0.33.1

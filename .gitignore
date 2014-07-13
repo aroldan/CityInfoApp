@@ -1,0 +1,27 @@
+
+# CocoaPods
+Pods
+
+# OS X
+.DS_Store
+
+
+*~.nib
+
+# build
+build/
+
+# xcode trash
+*.pbxuser
+*.perspective
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+project.xcworkspace/
+xcuserdata/
+
+#python
+*.egg
+*.egg-info
+*.pyc
