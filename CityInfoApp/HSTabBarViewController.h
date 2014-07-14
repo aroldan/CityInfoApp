@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <HSRoutingDelegate.h>
 
-@interface HSTabBarViewController : UITabBarController
+@interface HSTabBarViewController : UITabBarController<HSRoutingDelegate>
 
 @end

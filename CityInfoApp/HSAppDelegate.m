@@ -7,12 +7,36 @@
 //
 
 #import "HSAppDelegate.h"
+#import "HSTabBarViewController.h"
+#import <HSSimpleWeatherApp.h>
+#import <HSCityFactsApp.h>
+#import <HSRoute.h>
+#import <JLRoutes.h>
 
 @implementation HSAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    NSArray *apps = @[[HSCityFactsApp class], [HSSimpleWeatherApp class]];
+    HSTabBarViewController *baseTabController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateInitialViewController];
+    
+    NSMutableArray *baseVCs = [[NSMutableArray alloc] init];
+    // iterate through apps, add to navigation controller
+    [apps enumerateObjectsUsingBlock:^(id<HSBaseApp> app, NSUInteger idx, BOOL *stop) {
+        [baseVCs addObject:[app baseNavigationController]];
+        
+        [[app routesToRegister] enumerateObjectsUsingBlock:^(HSRoute *route, NSUInteger idx, BOOL *stop) {
+            NSLog(@"Registering route %@ in app %@", route.url, [app appIdentifierString]);
+            [JLRoutes addRoute:route.url handler:^BOOL(NSDictionary *parameters) {
+                route.action(baseTabController, route.url, parameters);
+                return YES;
+            }];
+        }];
+    }];
+    
+    baseTabController.viewControllers = [baseVCs copy];
+    [self.window setRootViewController:baseTabController];
+    
     return YES;
 }
 							

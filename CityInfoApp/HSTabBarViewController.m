@@ -7,7 +7,8 @@
 //
 
 #import "HSTabBarViewController.h"
-#import <HS
+#import <HSSimpleWeatherApp.h>
+#import <HSCityFactsApp.h>
 
 @interface HSTabBarViewController ()
 
@@ -28,14 +29,17 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    self.viewControllers = @[];
+
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)shouldPushViewController:(UIViewController *)controller {
+    [((UINavigationController *) self.selectedViewController) pushViewController:controller animated:YES];
 }
 
 /*

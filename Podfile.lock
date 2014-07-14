@@ -1,20 +1,29 @@
 PODS:
+  - AFNetworking (1.3.4)
   - HSCityFacts (0.0.1):
     - HSCore
   - HSCore (0.0.1):
     - JLRoutes (~> 1.5)
   - HSSimpleWeather (0.0.1):
     - HSCore
+    - NSString-UrlEncode (~> 1.1)
+    - OpenWeatherMapAPI (~> 0.0.5)
   - JLRoutes (1.5.1)
+  - NSString-UrlEncode (1.1.0)
+  - OpenWeatherMapAPI (0.0.5):
+    - AFNetworking (~> 1.3.1)
 
 DEPENDENCIES:
   - HSCityFacts
   - HSSimpleWeather
 
 SPEC CHECKSUMS:
-  HSCityFacts: d1e5b5a4d758d8865deb8b300942ae8c211f4bfc
+  AFNetworking: 80c4e0652b08eb34e25b9c0ff3c82556fe5967b4
+  HSCityFacts: d572cef9751948346cfd208824b46abeae951dbf
   HSCore: 562a50eea482094e98cf435dd45505c093fe6b70
-  HSSimpleWeather: 1d696abc259d5c92c40c7143d9e009b6e252def3
+  HSSimpleWeather: b81a4d8aa05a085d7ad499b048c01b722da632da
   JLRoutes: 3400fe314fc01c861a14ff7e183d209b0cd302ae
+  NSString-UrlEncode: 9b49b5499996dad0439373683820420978731628
+  OpenWeatherMapAPI: dba532198d083cae09089adbdbaf2831a8fc0c66
 
 COCOAPODS: 0.33.1
