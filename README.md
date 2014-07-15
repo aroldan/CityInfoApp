@@ -19,6 +19,13 @@ This demonstrates how you can set up modular iOS apps.
   git clone https://github.com/aroldan/HSPodsExample.git
   ``` 
 
+ 1. Clone repo
+
+  ```
+  cd ~/dev //or whatever your dev folder is
+  git clone https://github.com/aroldan/CityInfoApp.git 
+  ```
+
  1. Install pods
 
   Run `pod install` in the project folder.
